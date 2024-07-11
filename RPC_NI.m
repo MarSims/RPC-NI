@@ -17,6 +17,8 @@ function [cl] = RPC_NI(A, nClu, MinSize)
 % disp('Determining local density peaks');
 [index,supk,Rho,rep,Crep] = Rep_Point_Searching(A);
 
+%% Step 2: Density-adaptive distance
+% disp('Searching representative domain')
 nCrep = length(Crep);
 cdata=cell(1,nCrep); 
 cdataexp=cell(1,nCrep); 
@@ -35,8 +37,7 @@ for i=1:nCrep
     end
 end
 
-%% Step 2: Density-adaptive distance
-% disp('Compute density-adaptive distance');
+% disp('Computing density-adaptive distance');
 disCrep = pdist2(A(Crep,:),A(Crep,:)); 
 CRho = Rho(Crep);
 for i=1:nCrep
