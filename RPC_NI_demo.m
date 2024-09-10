@@ -3,9 +3,9 @@ function RPC_NI_demo
 %% load dataset
 data = textread('Jain.txt');
 [N,dim]=size(data);
-Tclass = data(:,dim);  % 真实类别
-nClu = length(unique(Tclass));  %类别数
-data = data(:,1:dim-1);   % 去除标签 
+Tclass = data(:,dim);  % TureLabel
+nClu = length(unique(Tclass));  %number of clusters
+data = data(:,1:dim-1);   
 
 %% parameter
 % MinSize = 0.02*N; % Note: parameter MinSize (i.e.,the minimal cluster size) is dependent on ratio; 
