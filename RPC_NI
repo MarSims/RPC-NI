@@ -39,7 +39,7 @@ for i=1:nCrep
 end
 
 %% Step 2：Density-adaptive distance
-% disp('Compute domain adaptive distance');
+% disp('Measuring density-adaptive distance matrix');
 disCrep = pdist2(data(Crep,:),data(Crep,:));  % Euclidean distances between cores
 CRho = Rho(Crep);
 for i=1:nCrep
