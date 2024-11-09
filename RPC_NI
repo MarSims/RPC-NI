@@ -58,7 +58,7 @@ end
 
 
 %% Step 3: MST-based clustering
-% disp('Construct MST on local density peaks');
+% disp('Construct MST on core representative points');
 [cores_cl]=MST_CLU(data(Crep,:),disCrep,nc,eta,M);
 
 label=zeros(N,1);
