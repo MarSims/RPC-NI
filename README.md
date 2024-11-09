@@ -1,6 +1,6 @@
 This is an implementation of our paper:
 
-Representative Point-Based Clustering with Neighborhood Information for Complex Data Structures 
+\textbf{Representative Point-Based Clustering with Neighborhood Information for Complex Data Structures}
 
 Author: Zhongju Shang, Yaoguo Dang, Haowei Wang, and Sifeng Liu 
 
