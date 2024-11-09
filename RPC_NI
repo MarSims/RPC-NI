@@ -12,7 +12,7 @@ function [label] = RPC_NI(data, M, eta)
 % label: the clustering result
 % -------------------------------------------------------------------------
 
-%% Step1: Determing core representative points
+%% Step 1: Determing core representative points
 %%
 [N,~]=size(data);
 tic;
@@ -38,7 +38,7 @@ for i=1:nCrep
     end
 end
 
-%% Step 2: Domain adaptive distance
+%% Step 2：Density-adaptive distance
 % disp('Compute domain adaptive distance');
 disCrep = pdist2(data(Crep,:),data(Crep,:));  % Euclidean distances between cores
 CRho = Rho(Crep);
