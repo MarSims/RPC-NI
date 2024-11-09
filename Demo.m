@@ -38,6 +38,6 @@ disp('NMI:');disp(nmi);
 %% plot
 figure;
 clr = hsv(nClu*1);
-gscatter(data(:,1),data(:,2),Tclass, clr, '.', 12);
+gscatter(data(:,1),data(:,2),Label, clr, '.', 12);
 
 end
