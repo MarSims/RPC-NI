@@ -1,7 +1,7 @@
 function  [Label]=MST_Clu(Crep,dist,eta,M,cl)
 %% -------------------------------------------------------------------------
 % Aim:
-% Construct MST on core representative points and clustering
+% Construct MST on core representative points and final clustering
 % -------------------------------------------------------------------------
 % Input:
 % Crep: core representative points
