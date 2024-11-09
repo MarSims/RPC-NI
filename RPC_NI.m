@@ -14,7 +14,7 @@ function [label] = RPC_NI(data, M, eta)
 
 %% Step 1: Determing core representative points
 % disp('Determining core representative points');
-[index,supk,Rho,rep,Crep,cl] = Rep_Point_Searching(data);
+[index,lammda,Rho,rep,Crep,cl] = Rep_Point_Searching(data);
 nCrep = length(Crep);
 % disp('Number of core representation points：');disp(nCrep);
 
@@ -26,7 +26,7 @@ for i=1:nCrep
     cdata{1,i}=find(rep==Crep(i))';
     [~,csize]=size(cdata{1,i});
     nc(i)=csize;
-    temp=index(cdata{1,i},2:supk+1);
+    temp=index(cdata{1,i},2:lammda+1);
     if csize~=1
     cdataexp{1,i}=union(cdata{1,i},temp)';
     else
