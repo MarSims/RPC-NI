@@ -59,7 +59,6 @@ for i=1:nCrep
 end
 
 %% Step 3: MST-basd clustering
-% disp('Construct MST on local density peaks');
 [label] = MULP_MSTCLU_R2(data(Crep,:),disCrep,eta,M,cl);
 
 end
