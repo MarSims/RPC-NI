@@ -18,9 +18,9 @@ function RPC_NI_demo
  % clc; clear all;
 data = textread('Jain.txt');
 [N,dim]=size(data);
-Tclass = data(:,dim);  % 真实类别
-nClu = length(unique(Tclass));  %类别数
-data = data(:,1:dim-1);   % 去除标签 
+Tclass = data(:,dim);  % True labels
+nClu = length(unique(Tclass));  % Number of clusters
+data = data(:,1:dim-1); 
 
 %% parameter
 eta = 0.02*N;       % For most cases (eta controls the minimum cluster size); 
