@@ -5,7 +5,7 @@ function RPC_NI_demo
 % Information for Complex Data Structures"
 % -------------------------------------------------------------------------
 % Input:
-% data: the data set
+% data: the dataset
 % eta: cluster size parameter
 % -------------------------------------------------------------------------
 % Output:
