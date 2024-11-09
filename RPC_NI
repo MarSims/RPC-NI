@@ -17,7 +17,7 @@ function [label] = RPC_NI(data, M, eta)
 [N,~]=size(data);
 tic;
 % disp('Determining core representative points');
-[index,supk,Rho,rep,Crep,cl] = Rep_point_Searching(data);
+[index,supk,Rho,rep,Crep,cl] = Rep_Point_Searching(data);
 nCrep = length(Crep);
 % disp('Number of core representation points：');disp(nCrep);
 
@@ -59,6 +59,6 @@ for i=1:nCrep
 end
 
 %% Step 3: MST-basd clustering
-[label] = MULP_MSTCLU(data(Crep,:),disCrep,eta,M,cl);
+[label] = MST_Clu(data(Crep,:),disCrep,eta,M,cl);
 
 end
