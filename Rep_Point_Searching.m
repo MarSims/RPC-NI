@@ -87,7 +87,7 @@ LC = sqrt(Rho .* Ita);  % Local Degree Centrality
 
 %% Step 3: determine representative points
 % disp('step 3: determine Reps...')
-indexKNN = index(:,1:supk+1);
+indexKNN = index(:,1:lammda+1);
 [~,max_ind] = max(LC(indexKNN),[],2); 
 rep =zeros(N,1); % Pre-allocate the space for the parent node vector. 
 for i=1:N
