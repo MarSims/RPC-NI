@@ -13,16 +13,17 @@ function [label] = RPC_NI(data, M, eta)
 % -------------------------------------------------------------------------
 
 %% Step1: Determing core representative points
+%%
 [N,~]=size(data);
+tic;
 % disp('Determining core representative points');
-[index,supk,Rho,rep,Crep] = Rep_Point_Searching(data);
-
-%% Step 2: Density-adaptive distance
-% disp('Searching representative domain')
+[index,supk,Rho,rep,Crep,cl] = Reps_Searching(data);
 nCrep = length(Crep);
-cdata=cell(1,nCrep); 
-cdataexp=cell(1,nCrep); 
-nc=zeros(1,nCrep); 
+% disp('Number of core representation points：');disp(nCrep);
+
+cdata=cell(1,nCrep);    % 保存每个簇中都有哪些点
+cdataexp=cell(1,nCrep); % 保存每个簇中的点及每个点中的k近邻
+nc=zeros(1,nCrep);      % 保存属于某个核心点的点数
 
 for i=1:nCrep
     cdata{1,i}=find(rep==Crep(i))';
@@ -37,8 +38,9 @@ for i=1:nCrep
     end
 end
 
-% disp('Measuring density-adaptive distance matrix');
-disCrep = pdist2(data(Crep,:),data(Crep,:)); 
+%% Step 2: Domain adaptive distance
+% disp('Compute domain adaptive distance');
+disCrep = pdist2(data(Crep,:),data(Crep,:));  % Euclidean distances between cores
 CRho = Rho(Crep);
 for i=1:nCrep
     for j=i+1:nCrep
@@ -56,19 +58,8 @@ for i=1:nCrep
     end
 end
 
-
-%% Step 3: MST-based clustering
-% disp('Construct MST on core representative points');
-[cores_cl]=MST_CLU(data(Crep,:),disCrep,nc,eta,M);
-
-%% Step 4: Final clusters
-label=zeros(N,1);
-for i=1:nCrep
-    label(Crep(i))=cores_cl(i);
-end
-for i=1:N
-    label(i)=label(rep(i));
-end
-disp('Complete!');
+%% Step 3: MST-basd clustering
+% disp('Construct MST on local density peaks');
+[label] = MULP_MSTCLU_R2(data(Crep,:),disCrep,eta,M,cl);
 
 end
