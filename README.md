@@ -1,4 +1,4 @@
-This is a very simple implementation of our paper:
+This is an implementation of our paper:
 
 Representative Point-Based Clustering with Neighborhood Information for Complex Data Structures 
 
