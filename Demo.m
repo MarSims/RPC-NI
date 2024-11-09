@@ -1,4 +1,4 @@
-function RPC_NI_demo
+function Demo
 % -------------------------------------------------------------------------
 % Aim:
 % The matlab code of "Representative Point-Based Clustering with Neighborhood
