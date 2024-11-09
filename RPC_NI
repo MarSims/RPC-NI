@@ -4,7 +4,7 @@ function [label] = RPC_NI(data, M, eta)
 % The matlab code of the RPC-NI algorithm
 % -------------------------------------------------------------------------
 % Input:
-% data: the data set
+% data: the dataset
 % M: the number of clusters
 % eta: cluster size parameter
 % -------------------------------------------------------------------------
