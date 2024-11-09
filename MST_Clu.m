@@ -35,7 +35,7 @@ if N > M
     end
     
     %% Cut the tree and update cluster labels
-    [rep,Crep] = EdgeCutting_R2(pred1,omega,cl,eta,M); 
+    [rep,Crep] = EdgeCutting(pred,omega,cl,eta,M); 
     visited=zeros(N,1);  % updata representative points
     for i = 1:N
         if rep(i) ~= i
