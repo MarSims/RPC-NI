@@ -10,7 +10,7 @@ function  [Label]=MST_Clu(Crep,dist,eta,M,cl)
 % M: the number of clusters
 % -------------------------------------------------------------------------
 % Output:
-% Label: the clustering result of local density peaks
+% Label: the clustering result
 % -------------------------------------------------------------------------
 
 [N,~]=size(Crep);
