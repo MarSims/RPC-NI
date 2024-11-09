@@ -37,7 +37,7 @@ for i=1:nCrep
     end
 end
 
-% disp('Computing density-adaptive distance');
+% disp('Measuring density-adaptive distance matrix');
 disCrep = pdist2(data(Crep,:),data(Crep,:)); 
 CRho = Rho(Crep);
 for i=1:nCrep
@@ -61,6 +61,7 @@ end
 % disp('Construct MST on core representative points');
 [cores_cl]=MST_CLU(data(Crep,:),disCrep,nc,eta,M);
 
+%% Step 4: Final clusters
 label=zeros(N,1);
 for i=1:nCrep
     label(Crep(i))=cores_cl(i);
