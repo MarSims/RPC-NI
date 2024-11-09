@@ -6,7 +6,6 @@ function RPC_NI_demo
 % -------------------------------------------------------------------------
 % Input:
 % data: the data set
-% clu_num:the number of clusters
 % eta: cluster size parameter
 % -------------------------------------------------------------------------
 % Output:
