@@ -1,4 +1,4 @@
-function [pr2,rs2] = Edge_Cutting(pred,weightE,c,eta,M)
+function [pr,rs] = Edge_Cutting(pred,weightE,c,eta,M)
 %============================================================
 % Aim:
 % MST-based clustering
@@ -100,7 +100,7 @@ if cutE < num_of_edges_required_to_remove
     warning('The value of eta is too large, preventing further edge cuts. Consider reducing eta.');
 end
 
-pr2 = pred;
-rs2 = find(pr2 == (1:len)); 
+pr = pred;
+rs = find(pr == (1:len)); 
 
 end
