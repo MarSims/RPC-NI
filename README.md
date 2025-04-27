@@ -6,7 +6,7 @@ Representative Point-Based Clustering with Neighborhood Information for Complex 
 
 Published in: IEEE Transactions on Cybernetics ( Volume: 55, Issue: 4, April 2025)
 
-https://ieeexplore.ieee.org/abstract/document/10887271
+https://ieeexplore.ieee.org/document/10887271
 
 ![Image text](https://github.com/MarSims/img-folder/blob/main/framework-R1.png)
 
