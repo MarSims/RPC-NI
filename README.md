@@ -2,7 +2,7 @@
 
 Representative Point-Based Clustering with Neighborhood Information for Complex Data Structures (RPC-NI)
 
-*Zhongju Shang, Yaoguo Dang, Haowei Wang, and Sifeng Liu*
+*Zhongju Shang, Yaoguo Dang, Haowei Wang, Sifeng Liu*
 
 Published in: IEEE Transactions on Cybernetics ( Volume: 55, Issue: 4, April 2025)
 
@@ -16,6 +16,7 @@ Discovering clusters remains challenging when dealing with complex data structur
 
 # 
 
+```
 @article{shang2025representative,
   title={Representative Point-Based Clustering With Neighborhood Information for Complex Data Structures},
   author={Shang, Zhongju and Dang, Yaoguo and Wang, Haowei and Liu, Sifeng},
@@ -24,8 +25,9 @@ Discovering clusters remains challenging when dealing with complex data structur
   number={4},
   pages={1620 - 1633},
   year={2025},
-  publisher={IEEE}
+  publisher={IEEE} 
 }
+```
 
 # 
 
